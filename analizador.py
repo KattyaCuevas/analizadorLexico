@@ -2,25 +2,18 @@
 from Tkinter import *  #Importamos el módulo para la interfaz
 
 ventana = Tk() #creamos la ventana principal
-ventana.config(bg="gray") #cambiamos el color
-#ventana.geometry("500x500") #tamaño de la ventana
-
-frame = Frame(ventana)
-frame.pack()
-
-label = Label(frame, text="Hola mundo")
-text = Text(frame)
-c1 = Checkbutton(frame, text="Uno")
-c2 = Checkbutton(frame, text="Dos")
-entry = Entry(frame)
-button = Button(frame, text="Aceptar")
-button.pack()
-ventana2=Toplevel(ventana)
-ventana2.withdraw()
-
-label.pack()
-c1.pack()
-entry.pack()
-button.pack()
-
+ventana.title('Analizador Léxico')
+ventana.geometry("500x500") #tamaño de la ventana
+label = Label(ventana, text="		")
+label.grid(row=1,column=1)
+label1 = Label(ventana, text="Ingresa la cadena:")
+label1.grid(row=1,column=2)
+label2 = Label(ventana, text="		")
+label2.grid(row=1,column=3)
+label3 = Label(ventana, text="Tokens encontrados")
+label3.grid(row=1,column=4)
+#text1 = Text(ventana)
+#text1.grid(row=2,column=1-2)
+boton = Button(ventana, text="Procesa")
+boton.grid(row=4,column=4)
 ventana.mainloop() #evento que llama al inicio del programa
