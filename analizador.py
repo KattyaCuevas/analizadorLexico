@@ -15,6 +15,8 @@ c2 = Checkbutton(frame, text="Dos")
 entry = Entry(frame)
 button = Button(frame, text="Aceptar")
 button.pack()
+ventana2=Toplevel(ventana)
+ventana2.withdraw()
 
 label.pack()
 c1.pack()
